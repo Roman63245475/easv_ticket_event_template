@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label styleClass="details_text" text="Enter Your Details">
+         <VBox.margin>
+            <Insets bottom="40.0" left="30.0" top="250.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="TOP_CENTER" styleClass="greetText" text="Username">
+         <VBox.margin>
+            <Insets left="45.0" />
+         </VBox.margin>
+      </Label>
+      <TextField maxWidth="-Infinity" prefWidth="250.0" styleClass="email_password_text_fields">
+         <VBox.margin>
+            <Insets bottom="35.0" left="45.0" />
+         </VBox.margin>
+      </TextField>
+      <Label styleClass="greetText" text="Password">
+         <VBox.margin>
+            <Insets left="45.0" />
+         </VBox.margin>
+      </Label>
+      <TextField layoutX="40.0" layoutY="440.0" maxWidth="-Infinity" prefWidth="250.0" styleClass="email_password_text_fields">
+         <VBox.margin>
+            <Insets bottom="80.0" left="45.0" />
+         </VBox.margin>
+      </TextField>
+      <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="237.0" styleClass="sign_in_button_actual" text="Login">
+         <VBox.margin>
+            <Insets bottom="15.0" left="80.0" />
+         </VBox.margin>
+      </Button>
+      <HBox prefHeight="15.0" prefWidth="402.0" spacing="50.0">
+         <children>
+            <Circle radius="8.0" stroke="BLACK" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="125.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle layoutX="143.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle layoutX="189.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="50.0" />
+   </padding>
+</VBox>

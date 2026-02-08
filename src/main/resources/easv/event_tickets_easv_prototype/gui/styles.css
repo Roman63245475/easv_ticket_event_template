@@ -7,9 +7,55 @@
     -fx-text-fill: #9D8EB9;
 }
 
+.details_text {
+    -fx-font-size: 40;
+    -fx-text-fill: #9D8EB9;
+}
+
 .sign_in_text {
     -fx-text-fill: #9D8EB9;
     -fx-font-size: 20px;
+}
+
+.email_password_text_fields {
+    -fx-background-color: #616C8B;
+}
+
+.sign_in_button_actual {
+    -fx-background-color: #3C2F53;
+    -fx-font-size: 30;
+    -fx-text-fill: #9D8EB9;
+}
+
+.lists_names {
+    -fx-font-size: 20px;
+}
+
+.table_view_columns .label {
+    -fx-background-color: #141212;
+    -fx-text-fill: #B3A8A8;
+}
+
+.table_view {
+    -fx-background-color: #141212;
+}
+
+.table-view .column-header {
+    -fx-background-color: #141212;
+}
+
+.table-view .column-header .separator {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #141212;
+    -fx-border-color: transparent;
+}
+
+.delete_create_button {
+    -fx-background-color: #352882;
+    -fx-text-fill: #FFFFFF;
 }
 
 .sing_in_button {

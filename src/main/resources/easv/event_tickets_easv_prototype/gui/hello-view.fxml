@@ -20,11 +20,11 @@
             <Insets bottom="50.0" left="20.0" />
          </VBox.margin>
       </Label>
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="193.0" styleClass="sing_in_button" text="Admin">
+      <Button fx:id="adminButton" mnemonicParsing="false" onAction="#loginClick" prefHeight="40.0" prefWidth="193.0" styleClass="sing_in_button" text="Admin">
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="193.0" styleClass="sing_in_button" text="Event Coordinator" />
+      <Button fx:id="eventCoordinatorButton" mnemonicParsing="false" onAction="#loginClick" prefHeight="40.0" prefWidth="193.0" styleClass="sing_in_button" text="Event Coordinator" />
    </children>
 </VBox>

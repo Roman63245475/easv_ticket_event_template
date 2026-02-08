@@ -20,6 +20,9 @@ public class GreetWindowController {
     private Button eventCoordinatorButton;
 
     @FXML
+    private Button loginButton;
+
+    @FXML
     private Button adminButton;
 
     @FXML
@@ -41,16 +44,49 @@ public class GreetWindowController {
             openLoginWindow();
         }
         catch (IOException e){
-            System.out.println("error");
+            System.out.println("error while opening login window");
         }
 
     }
 
+    private void setAdmin(boolean bool){
+        this.admin = bool;
+    }
+
     private void openLoginWindow() throws IOException {
-        FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource("/easv/event_tickets_easv_prototype/gui/login_view.fxml"));
-        VBox parent = (VBox) loader.load();
-        Stage stage = (Stage) adminButton.getScene().getWindow();
-        stage.setScene(new Scene(parent));
+        if (admin){
+            FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource("/easv/event_tickets_easv_prototype/gui/login_view.fxml"));
+            VBox parent = (VBox) loader.load();
+            GreetWindowController gwc = loader.getController();
+            gwc.setAdmin(true);
+            Stage stage = (Stage) adminButton.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }
+        else{
+            FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource("/easv/event_tickets_easv_prototype/gui/login_view.fxml"));
+            VBox parent = (VBox) loader.load();
+            Stage stage = (Stage) adminButton.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }
+
+    }
+
+    @FXML
+    private void actualLoginIn() {
+        if (admin){
+            try {
+                FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource("/easv/event_tickets_easv_prototype/gui/admin_panel.fxml"));
+                VBox parent = (VBox) loader.load();
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.setScene(new Scene(parent));
+            }
+            catch (IOException e){
+                System.out.println("error");
+            }
+        }
+        else{
+            System.out.println("pashol nahuy");
+        }
     }
 
     @FXML

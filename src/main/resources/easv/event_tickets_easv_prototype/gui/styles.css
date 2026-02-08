@@ -1,0 +1,19 @@
+.greetWindow {
+    -fx-background-color: #3C3651;
+}
+
+.greetText {
+    -fx-font-size: 23px;
+    -fx-text-fill: #9D8EB9;
+}
+
+.sign_in_text {
+    -fx-text-fill: #9D8EB9;
+    -fx-font-size: 20px;
+}
+
+.sing_in_button {
+    -fx-background-color: #3C2F53;
+    -fx-font-size: 18;
+    -fx-text-fill: #9D8EB9;
+}

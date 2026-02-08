@@ -31,12 +31,12 @@
     -fx-font-size: 20px;
 }
 
-.table_view_columns .label {
+.table-view .label {
     -fx-background-color: #141212;
     -fx-text-fill: #B3A8A8;
 }
 
-.table_view {
+.table-view {
     -fx-background-color: #141212;
 }
 

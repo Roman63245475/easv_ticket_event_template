@@ -25,9 +25,9 @@
             <Insets bottom="10.0" left="10.0" right="10.0" />
          </VBox.margin>
       </TableView>
-      <HBox prefWidth="600.0" spacing="26.0">
+      <HBox prefWidth="600.0" spacing="18.0">
          <children>
-            <Button fx:id="newEvent" minWidth="80.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="102.0" styleClass="delete_create_button" text="Create new Event">
+            <Button fx:id="newEvent" minWidth="102.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="102.0" styleClass="delete_create_button" text="Create new Event">
                <font>
                   <Font size="11.0" />
                </font>
@@ -35,9 +35,9 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button minWidth="39.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="39.0" styleClass="delete_create_button" text="Edit" />
-            <Button mnemonicParsing="false" onAction="#seeMore" styleClass="delete_create_button" text="See More" />
-            <Button minWidth="89.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="25.0" prefWidth="95.0" styleClass="delete_create_button" text="Delete an Event">
+            <Button minWidth="61.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="61.0" styleClass="delete_create_button" text="Edit" />
+            <Button minWidth="69.0" mnemonicParsing="false" onAction="#seeMore" prefHeight="25.0" prefWidth="69.0" styleClass="delete_create_button" text="See More" />
+            <Button minWidth="93.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="25.0" prefWidth="93.0" styleClass="delete_create_button" text="Delete an Event">
                <font>
                   <Font size="11.0" />
                </font>

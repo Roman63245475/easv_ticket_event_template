@@ -1,5 +1,5 @@
 .greetWindow {
-    -fx-background-color: #3C3651;
+    -fx-background-color: #1f1a23;
 }
 
 .greetText {
@@ -25,7 +25,7 @@
     -fx-text-fill: #9D8EB9;
 }
 .sign_in_button_actual {
-    -fx-background-color: #3C2F53;
+    -fx-background-color: #0d0d10;
     -fx-font-size: 30;
     -fx-text-fill: #9D8EB9;
 }
@@ -57,12 +57,16 @@
 }
 
 .delete_create_button {
-    -fx-background-color: #352882;
+    -fx-background-color: #0d0d10;
     -fx-text-fill: #FFFFFF;
 }
 
 .sing_in_button {
-    -fx-background-color: #3C2F53;
+    -fx-background-color: #0d0d10;
     -fx-font-size: 18;
     -fx-text-fill: #9D8EB9;
+}
+
+.text-field {
+    -fx-text-fill: #FFFFFF;
 }

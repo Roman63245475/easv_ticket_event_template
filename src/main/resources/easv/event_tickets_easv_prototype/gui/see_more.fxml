@@ -1,71 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="173.0" prefWidth="402.0" spacing="5.0">
-         <children>
-            <Label prefHeight="33.0" prefWidth="60.0" styleClass="greetText" text="Title:" HBox.hgrow="ALWAYS">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label styleClass="greetText" text="Title of an event" wrapText="true" HBox.hgrow="ALWAYS" />
-         </children>
-         <VBox.margin>
-            <Insets bottom="20.0" top="50.0" />
-         </VBox.margin>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="402.0" spacing="5.0">
-         <children>
-            <Label prefHeight="66.0" prefWidth="150.0" styleClass="greetText" text="Start Date:" wrapText="true" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label maxWidth="1.7976931348623157E308" prefHeight="81.0" prefWidth="302.0" styleClass="greetText" text="Start date of the event 'dd.mm.yyyy'" wrapText="true" HBox.hgrow="ALWAYS" />
-         </children>
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="89.0" prefWidth="402.0" spacing="5.0">
-         <children>
-            <Label styleClass="greetText" text="Location:" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label maxHeight="1.7976931348623157E308" prefHeight="51.0" prefWidth="287.0" styleClass="greetText" text="Location of the event where someone is pidoras" wrapText="true" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="20.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="161.0" prefWidth="402.0" spacing="5.0">
-         <children>
-            <Label prefHeight="67.0" prefWidth="102.0" styleClass="greetText" text="Notes:" wrapText="true" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="98.0" prefWidth="342.0" styleClass="greetText" text="Extra information about the event" wrapText="true" HBox.hgrow="ALWAYS" />
-         </children>
-      </HBox>
-   </children>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
+   <Label prefHeight="17.0" prefWidth="129.0" text="Event Info" textFill="WHITE">
+      <font>
+         <Font size="29.0" />
+      </font>
+   </Label>
+   <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="63.0" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="94.0" text="Title:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="94.0" text="Location:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="273.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="116.0" text="Start Date:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="252.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="150.0" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="110.0" text="End Date:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="260.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="193.0" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="110.0" text="Start Time:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="260.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="237.0" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="110.0" text="End Time:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="262.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="94.0" text="Notes:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="279.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="323.0" prefHeight="95.0" prefWidth="382.0" spacing="10.0">
+      <children>
+         <Label minWidth="94.0" prefHeight="43.0" prefWidth="196.0" text="Location Guidance:" textFill="#ffffffb8" wrapText="true" HBox.hgrow="ALWAYS">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label minWidth="42.0" prefHeight="34.0" prefWidth="177.0" text="Info" textFill="#ffffffb8" wrapText="true">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </VBox>

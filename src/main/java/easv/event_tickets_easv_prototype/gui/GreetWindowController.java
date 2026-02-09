@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -19,16 +16,28 @@ public class GreetWindowController {
     private Label welcomeText;
 
     @FXML
+    private Label titleLabel;
+
+    @FXML
     private Button eventCoordinatorButton;
 
     @FXML
     private Button loginButton;
 
     @FXML
+    private Button newEvent;
+
+    @FXML
     private TableView<Object> coordinatorsTable;
 
     @FXML
+    private TableView<Object> eventsTable;
+
+    @FXML
     private Button adminButton;
+
+    @FXML
+    private TextField titleInput;
 
     @FXML
     private boolean admin;
@@ -94,6 +103,11 @@ public class GreetWindowController {
         showAlert("Are you sure that you want to delete this event Coordinator?");
     }
 
+    @FXML
+    private void deleteEvent(){
+        showAlert("Are you sure that you want to delete this event?");
+    }
+
     private void showAlert(String message){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
@@ -105,12 +119,25 @@ public class GreetWindowController {
 
     @FXML
     private void assignCoordinator(){
-        showAlert("For assigning a coordinator you need to select a coordinator from a list above and select an even respectively");
+        showAlert("For assigning a coordinator you need to select a coordinator from a list above and select an event respectively");
     }
 
     @FXML
-    private void seeMore(){
+    private void grantAccess(){
+        showAlert("For granting access you need to select an event from a list above and select a coordinator respectively");
+    }
 
+    @FXML
+    private void seeMore() throws IOException {
+        FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource("/easv/event_tickets_easv_prototype/gui/see_more.fxml"));
+        Parent parent = loader.load();
+        if (eventsTable != null) {
+            Stage stage = (Stage) eventsTable.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }else{
+            Stage stage = (Stage) coordinatorsTable.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }
     }
 
     @FXML
@@ -126,4 +153,38 @@ public class GreetWindowController {
             System.out.println("error");
         }
     }
+
+    @FXML
+    private void createNewEvent(ActionEvent event) {
+        String fileName = "/easv/event_tickets_easv_prototype/gui/new-event-view.fxml";
+        Button button = (Button) event.getSource();
+        String title = (event.getSource() == newEvent) ? "Create New Event" : "Edit Event";
+        try{
+            FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource(fileName));
+            VBox parent = (VBox) loader.load();
+            GreetWindowController controller = loader.getController();
+            controller.titleLabel.setText(title);
+            Stage stage = (Stage) eventsTable.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }
+        catch (IOException e){
+            System.out.println("tupoi huilan");
+        }
+    }
+
+    @FXML
+    private void onCancel(ActionEvent event) {
+        String fileName = "/easv/event_tickets_easv_prototype/gui/coordinator-view.fxml";
+        try{
+            FXMLLoader loader = new FXMLLoader(GreetWindowController.class.getResource(fileName));
+            VBox parent = (VBox) loader.load();
+            Stage stage = (Stage) titleInput.getScene().getWindow();
+            stage.setScene(new Scene(parent));
+        }
+        catch (IOException e){
+            System.out.println("tupoi huilan");
+        }
+    }
+
+
 }

@@ -6,14 +6,14 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="easv.event_tickets_easv_prototype.gui.GreetWindowController" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="easv.event_tickets_easv_prototype.gui.GreetWindowController">
    <children>
       <Label styleClass="lists_names" text="Your Events:" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="5.0" left="10.0" />
          </VBox.margin>
       </Label>
-      <TableView centerShape="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="eventsTable" centerShape="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
          <columns>
             <TableColumn prefWidth="297.9999898672104" text="Name" />
             <TableColumn prefWidth="299.3333435058594" text="Tickets Left" />
@@ -27,7 +27,7 @@
       </TableView>
       <HBox prefWidth="600.0" spacing="26.0">
          <children>
-            <Button minWidth="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" styleClass="delete_create_button" text="Create new Event">
+            <Button fx:id="newEvent" minWidth="80.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="102.0" styleClass="delete_create_button" text="Create new Event">
                <font>
                   <Font size="11.0" />
                </font>
@@ -35,9 +35,9 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button minWidth="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="39.0" styleClass="delete_create_button" text="Edit" />
-            <Button mnemonicParsing="false" styleClass="delete_create_button" text="See More" />
-            <Button minWidth="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" styleClass="delete_create_button" text="Delete an Event">
+            <Button minWidth="39.0" mnemonicParsing="false" onAction="#createNewEvent" prefHeight="25.0" prefWidth="39.0" styleClass="delete_create_button" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#seeMore" styleClass="delete_create_button" text="See More" />
+            <Button minWidth="89.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="25.0" prefWidth="95.0" styleClass="delete_create_button" text="Delete an Event">
                <font>
                   <Font size="11.0" />
                </font>
@@ -69,11 +69,10 @@
       </TableView>
       <HBox prefWidth="600.0" spacing="115.0">
          <children>
-            <Button minWidth="125.0" mnemonicParsing="false" styleClass="delete_create_button" text="Grant Access">
+            <Button minWidth="125.0" mnemonicParsing="false" onAction="#grantAccess" styleClass="delete_create_button" text="Grant Access">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></Button>
-            <Button minWidth="125.0" mnemonicParsing="false" prefWidth="141.0" styleClass="delete_create_button" text="Revoke Access" />
          </children>
       </HBox>
    </children>

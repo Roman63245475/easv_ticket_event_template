@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="402.0" styleClass="greetWindow" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="easv.event_tickets_easv_prototype.gui.GreetWindowController" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label styleClass="lists_names" text="Your Events:" textFill="WHITE">
          <VBox.margin>

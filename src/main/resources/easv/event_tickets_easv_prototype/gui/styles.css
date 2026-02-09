@@ -21,6 +21,9 @@
     -fx-background-color: #616C8B;
 }
 
+.txt_color {
+    -fx-text-fill: #9D8EB9;
+}
 .sign_in_button_actual {
     -fx-background-color: #3C2F53;
     -fx-font-size: 30;

@@ -98,7 +98,7 @@
       </HBox>
       <HBox alignment="CENTER" prefWidth="200.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onCancel" styleClass="delete_create_button" text="Create" />
+            <Button fx:id="createBtn" mnemonicParsing="false" onAction="#onCancel" styleClass="delete_create_button" text="Create" />
             <Button mnemonicParsing="false" onAction="#onCancel" styleClass="delete_create_button" text="Cancel" />
          </children>
       </HBox>
